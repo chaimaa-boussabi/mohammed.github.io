@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="h1" style="visibility : hidden;">title1</div>
+    <div class="h2" style="visibility : hidden;">title2</div>
+    <div class="h3" style="visibility : hidden;">title3 </div>
+    <div class="h4" style="visibility : hidden;"> title4</div>
+    <script>
+        new Promise((resolve,reject)=>{
+            setTimeout( ()=> {
+            document.querySelector('.h1').style.visibility =' visible'
+            resolve()},1000)
+         
+        }).then(()=>{
+            return  new Promise((resolve,reject)=>{ setTimeout( ()=> {
+            document.querySelector('.h2').style.visibility =' visible'
+            resolve()},1000)
+         
+        })
+        }).then(()=>{
+            return  new Promise((resolve,reject)=>{ setTimeout( ()=> {
+            document.querySelector('.h3').style.visibility =' visible'
+            resolve()},1000)
+         
+        })
+        }).then(()=>{
+            return  new Promise((resolve,reject)=>{ setTimeout( ()=> {
+            document.querySelector('.h4').style.visibility =' visible'
+            },2000)
+         
+        })
+        })
+    </script>
+</body>
+</html>
